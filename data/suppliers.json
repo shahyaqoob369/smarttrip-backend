@@ -1,0 +1,41 @@
+{
+  "affiliate_marker": "YOUR_AFFILIATE_ID",
+  "suppliers": {
+    "hotels": {
+      "url": "https://www.booking.com/"
+    },
+    "flights": {
+      "url": "https://www.kiwi.com/"
+    },
+    "trains-buses": {
+      "url": "https://www.omio.com/"
+    },
+    "car-rentals": {
+      "url": "https://www.discovercars.com/"
+    },
+    "airport-transfers": {
+      "url": "https://www.welcomepickups.com/"
+    },
+    "tours-activities": {
+      "url": "https://www.viator.com/"
+    },
+    "vacation-rentals": {
+      "url": "https://www.vrbo.com/"
+    },
+    "hostels": {
+      "url": "https://www.hostelworld.com/"
+    },
+    "yachts-cruises": {
+      "url": "https://searadar.com/"
+    },
+    "travel-insurance": {
+      "url": "https://www.ekta.insure/"
+    },
+    "esim-cards": {
+      "url": "https://yesim.app/"
+    },
+    "flight-compensation": {
+      "url": "https://www.airhelp.com/"
+    }
+  }
+}
