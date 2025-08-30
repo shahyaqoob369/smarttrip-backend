@@ -23,7 +23,6 @@ app.get('/', (req, res) => {
 app.use('/redirect', redirectRoute);
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
-app.use('/api', seedRoute); 
 
 
 // --- Main Server Startup Function ---
