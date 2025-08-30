@@ -6,6 +6,7 @@ const pool = require('./config/db');
 const redirectRoute = require('./routes/redirect');
 const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin');
+const seedRoute = require('./routes/seedRoute');
 
 const app = express();
 const PORT = 3000;
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 app.use('/redirect', redirectRoute);
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api', seedRoute); 
 
 
 // --- Main Server Startup Function ---

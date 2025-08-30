@@ -10,6 +10,10 @@ const pool = new Pool({
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
   database: process.env.DB_DATABASE,
+
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 // We export the pool so we can use it to run queries in other files.
