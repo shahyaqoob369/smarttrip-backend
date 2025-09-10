@@ -19,24 +19,27 @@ router.get('/:serviceName', async (req, res) => {
       // 1. Always set the affiliate marker first.
       destinationUrl.searchParams.set('marker', supplierData.affiliate_marker);
       
-      // 2. Add special parameters for specific suppliers.
+      // 2. Add special parameters for specific suppliers, ensuring correct order.
       if (serviceName === 'travel-insurance') {
         destinationUrl.searchParams.set('lang', 'en');
       }
       
-      // We are now sending a redirect again, as this is the correct final implementation.
-      res.redirect(302, destinationUrl.toString());
+      // We send the URL back as JSON data for our frontend to handle.
+      res.json({ url: destinationUrl.toString() });
 
     } else {
-      res.status(404).send('Service not found');
+      res.status(404).json({ error: 'Service not found' });
     }
   } catch (err) {
     console.error('Database query error', err.stack);
-    res.status(500).send('Internal server error');
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
 
 module.exports = router;
+
+
+
 
 
 // const express = require('express');
